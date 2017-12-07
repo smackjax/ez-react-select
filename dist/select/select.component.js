@@ -1,15 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SelectDropdown from '../select-dropdown/select-dropdown.component';
-import './select.css';
 
 export default class SelectInput extends React.Component {
-    // props.className
-    // props.name
-    // props.onChange
+    static propTypes = {
+        name: PropTypes.string,
+        onChange: PropTypes.func.isRequired,
 
-    // ?props.dropdownClassName
-    // ?props.optClassName
-    // ?props.selectedClassName
+        className: PropTypes.string,
+        dropdownClassName: PropTypes.string,
+        optionClassName: PropTypes.string,
+        selectedClassName: PropTypes.string,
+    }
 
     state={
         open: false,
@@ -43,7 +45,7 @@ export default class SelectInput extends React.Component {
                 // which makes sense to me anyway. 
 
                 // give placeholder needed "option" classNames
-                const newClassName = (this.props.optClassName || "") + 
+                const newClassName = (this.props.optionClassName || "") + 
                 ' ' + (child.props.className || "");
 
                     SelectedOption = React.cloneElement(
@@ -74,13 +76,13 @@ export default class SelectInput extends React.Component {
                 return child;
             } else {
                 // adds individual className after blanket className
-                const newClassName = (this.props.optClassName || "") + ' ' +
+                const newClassName = (this.props.optionClassName || "") + ' ' +
                 (child.props.className || "");
                 
                 const newOption = React.cloneElement(
                     child, 
                     {
-                        // I don't like this repetition between these two function
+                        // TODO I don't like this repetition between these two functions
                         selected: null,
                         onClick: this.handleChange.bind(this),
                         name: this.props.name,
@@ -132,22 +134,20 @@ export default class SelectInput extends React.Component {
             SelectedOption,
             selectedIndex
         });
-        // Pass event to parent onChange/onClick. 
+        // Pass event to parent onChange. 
             // TODO need to decide what 'target' will point to. 
             // Right now it's to an invisible input
         if(this.props.onChange){
             this.props.onChange(e);
         } 
-        if(this.props.onClick){
-            this.props.onClick(e);
-        }
     }
 
     findOption(childIndex, OptionList){
         // get index number (since 'data' attribute stores a string)
         // TODO might need to change to random generated key(shortId)
         const parsedIndex = parseInt(childIndex, 10);
-        // populate options(children) to choose from
+        // populate options(children) to choose from,
+        // either from children passed in or state
         const children = OptionList ? 
             [...OptionList] :[...this.state.Options];
         // prepare var
@@ -191,14 +191,14 @@ export default class SelectInput extends React.Component {
         const SelectedOptionWithClass = SelectedOption ?
             React.cloneElement(SelectedOption, {
                 className: SelectedOption.props.className + 
-                    " " + this.props.selectedClassName
+                    " selected " + (this.props.selectedClassName || '')
             }) : "";
             
         return(
         <div
         style={this.props.style || {}}
         id={this.props.id}
-        className={"select-items-wrapper " + this.props.className}
+        className={"ez-select-wrapper " + (this.props.className || "")}
         >
 
             { // Render 'SelectedOption', now cloned with selected class

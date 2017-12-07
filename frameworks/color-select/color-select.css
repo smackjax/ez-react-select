@@ -1,0 +1,19 @@
+.ez-select-item.color-bg{
+    color: #fff;
+    font-weight: bold;
+}
+.ez-select-item.orange{ 
+    background-color: #fb812e;
+}
+.ez-select-item.blue{ 
+    background-color: #4263d4;
+}
+.ez-select-item.pink{ 
+    background-color: #f742d2 
+} 
+.ez-select-item.green{ 
+    background-color: #3aa92b
+}
+.ez-select-item.selected.color-bg:hover{
+    background: purple;
+}

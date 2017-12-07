@@ -1,0 +1,27 @@
+.svg-type-select-wrapper{
+    display: flex;
+    width: 60px;
+    margin-right: auto;
+    margin-left: 10px;
+}
+.color-type-select-dropdown{
+    width: 200px;
+    right: 0;
+    transform: translateX(60px);
+    display: flex;
+    justify-content: center;
+}
+.svg-type-select-item{
+    width: 100px;
+    height: 100px;
+
+}
+.svg-type-select-item.selected{
+    width: 70px;
+    border: 5px dashed rgb(196, 47, 163);
+}
+.svg-type-select-item img{
+    min-width: 100%;
+    min-height: 100%;
+
+}

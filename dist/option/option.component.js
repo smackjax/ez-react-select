@@ -1,16 +1,16 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 export default class EZSelectOption extends React.Component{
-    // props.open ( from 'select' parent ) 
-    // props.onChange( from 'select' parent )
-    // props.name( from 'select' parent )
+    static propTypes = {
+        id: PropTypes.string,
+        className: PropTypes.string,
+        value: PropTypes.any.isRequired, //<- Screw you, conventional wisdom! You'll never take me alive!
 
-    
-    // props.value
-    // ?props.id
-    // ?props.className
-
+        // ** Controlled by <Select> parent
+        name: PropTypes.string,
+        onChange: PropTypes.func
+    }
 
     static defaultProps={
         isSelectOption: true
@@ -20,12 +20,11 @@ export default class EZSelectOption extends React.Component{
         return (
             <label 
             id={this.props.id}
-            className={this.props.className}
+            className={"ez-select-item " + (this.props.className || "")}
             >
                 <input type="radio"
                 onClick={this.props.onChange || this.props.onClick}
                 name={this.props.name}
-                disabled={this.props.disabled}
                 value={this.props.value || ""}
                 style={{display: "none"}}
                 data-index={this.props.childIndex}

@@ -1,0 +1,26 @@
+
+.ez-select-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2px 0;
+    padding: 5px 10px;
+    max-width: 100%;
+
+}
+.ez-select-item:hover,
+.ez-select-item.selected:hover{
+    background: #eee;
+}
+.ez-select-item.selected{
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+.ez-select-item.selected::after{
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin-left: auto; 
+    content: url('./_resources/chevron-down.svg');
+}
