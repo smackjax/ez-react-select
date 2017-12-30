@@ -77,7 +77,7 @@ The main `<Select>` element accepts these className props and appends them onto 
 
 ---
 
-# Contributing
+# Stuff to be done
 ### The Core
 ###### <Select>, <SelectDropdown>, <Option>
 
