@@ -79,7 +79,7 @@ The main `<Select>` element accepts these className props and appends them onto 
 
 # Contributing
 ### The Core
-######(Select, SelectDropdown Option)
+###### <Select>, <SelectDropdown>, <Option>
 
 ### **Things needin' doin'**
 If you feel like taking a crack at any of these, or think it would benefit from a different feature, feel free. 
@@ -91,7 +91,7 @@ I just ask if it limits the customization(for example, limits children to only b
 * [ ] **OptGroup** - I can't think of an implementation that would play nice with the level of customization `<Select>` allows, but it wouldn't hurt to explore the idea in order to bring this closer to standard HTML.
 
 ### Frameworks
-*If your not sure how to test a component with `ref`s, @[gaearon](https://github.com/gaearon) gave an awesome(and easy) answer [here](https://stackoverflow.com/questions/31169760/how-to-avoid-react-loading-twice-with-webpack-when-developing).*
+*If you're not sure how to test a component with  `ref`, @[gaearon](https://github.com/gaearon) gave an awesome(and easy) answer [here](https://stackoverflow.com/questions/31169760/how-to-avoid-react-loading-twice-with-webpack-when-developing).*
 
 I tried to make this easy, but here's the process:
 * **Setup**
