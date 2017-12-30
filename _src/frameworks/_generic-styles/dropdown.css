@@ -1,0 +1,15 @@
+.ez-select-dropdown{
+    z-index: 200;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    transform: translateY(100%);
+    bottom: 0;
+
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 0 0 .25rem .25rem;
+}
