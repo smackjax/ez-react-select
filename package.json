@@ -1,6 +1,6 @@
 {
   "name": "ez-react-select",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An easy to use ReactJS Select input that supports any kind of element in each <Option> tag.",
   "main": "components/index.js",
   "scripts": {

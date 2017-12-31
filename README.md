@@ -7,7 +7,10 @@ The upside is, each `<Option>` can look however you want, containing whatever yo
 The downside being any styling that needs to be done is on the developer, although I've tried to give a couple useful examples. 
 
 ## Examples
-Frameworks/examples can be seen by importing `ez-react-select/frameworks`
+Frameworks/examples can be seen by importing `ez-react-select/frameworks`. 
+``` javascript
+import { BlankSelect, BasicSelect, ColorSelect } from 'ez-react-select/frameworks';
+```
 
 ## Usage
 `npm install --save ez-react-select`
@@ -21,7 +24,7 @@ id="(Optional, but if set then the dropdown id will be this + '-dropdown')"
 className="(Applied to main container)"
 selectedClassName="(Applied to the 'selected' item)"
 dropdownClassName="(Applied to the hidden dropdown)"
-optClassName="(Applied to all Option element children)"
+optionClassName="(Applied to all Option element children)"
 onChange={Required}
 >
     <Option
@@ -60,7 +63,7 @@ These are always defined and appended, but custom classes added will override(**
 * **.ez-select-wrapper** - `<Select>` wrapper
 * **.ez-select-dropdown** - Dropdown div
 * **.ez-select-item** - All `<Option>` elements
-* **.select** - Child being displayed, including placeholders
+* **.selected** - Child being displayed, including placeholders
 
 ## `<Select>` className props: 
 The main `<Select>` element accepts these className props and appends them onto the various elements
@@ -77,11 +80,10 @@ The main `<Select>` element accepts these className props and appends them onto 
 
 ---
 
-# Stuff to be done
-### The Core
-###### <Select>, <SelectDropdown>, <Option>
+# Contributing
 
-### **Things needin' doin'**
+### The Core
+###### `<Select>, <SelectDropdown>, <Option>`
 If you feel like taking a crack at any of these, or think it would benefit from a different feature, feel free. 
 I just ask if it limits the customization(for example, limits children to only be `<Options>`), you make a 'framework' instead of changing the core.
 * [ ] **Accessibility** - I have no idea how to make this accessible; but it is a priority.
