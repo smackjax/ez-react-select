@@ -88,9 +88,12 @@ If you feel like taking a crack at any of these, or think it would benefit from 
 I just ask if it limits the customization(for example, limits children to only be `<Options>`), you make a 'framework' instead of changing the core.
 * [ ] **Accessibility** - I have no idea how to make this accessible; but it is a priority.
 * [ ] **Tabbable** - ...and currently, it's not. Which can be really annoying if you have a good tab flow through your form.
+* [ ] **Soft navigation** - With up/down arrow keys and enter.
+* [ ] **props.style** - Add to handling to `<Option>` and `<SelectDropdown>`
 * [ ] **e.target** - Currently e.target is pointing at a hidden radio input, which works for getting an onChange value, but not much else. It would be nice to have it pointed at something more useful, but I'm open as to what that should be.
 * [ ] **Add/Remove `<Option>` after mount** - I haven't tested this at all. Could open up some interesting possibilities.
 * [ ] **OptGroup** - I can't think of an implementation that would play nice with the level of customization `<Select>` allows, but it wouldn't hurt to explore the idea in order to bring this closer to standard HTML.
+* [ ] **Tests** - Yes. Yes I should have.
 
 ### Frameworks
 *If you're not sure how to test a component with  `ref`, @[gaearon](https://github.com/gaearon) gave an awesome(and easy) answer [here](https://stackoverflow.com/questions/31169760/how-to-avoid-react-loading-twice-with-webpack-when-developing).*
